@@ -6,6 +6,11 @@ import (
 	"log"
 )
 
+type URLs struct {
+	ShortURL string `db:"shorturl"`
+	LongURL  string `db:"longurl"`
+}
+
 func GenerateUrl() string {
 	randomBytes := make([]byte, 6)
 	_, err := rand.Read(randomBytes)
